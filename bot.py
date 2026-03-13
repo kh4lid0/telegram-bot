@@ -1,23 +1,13 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-
-‏TOKEN ="8744821732:AAHnRuOBfmOgL8_iE_w9yK14-qOfYYN75kw"
+TOKEN = "8744821732:AAH90RaSpQBDYrxq0WRYMyBK2wteTRmtieg"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("البوت اشتغل بنجاح ✅")
+    await update.message.reply_text("Bot is working!")
 
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("اكتب /start لتشغيل البوت")
+app = ApplicationBuilder().token(TOKEN).build()
 
-def main():
-    app = ApplicationBuilder().token(TOKEN).build()
+app.add_handler(CommandHandler("start", start))
 
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("help", help_command))
-
-    print("Bot is running...")
-    app.run_polling()
-
-if __name__ == "__main__":
-    main()
+app.run_polling()
