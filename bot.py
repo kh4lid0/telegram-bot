@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 
-‏TOKEN = "8744821732:AAHnRuOBfmOgL8_iE_w9yK14-qOfYYN75kw"
+‏TOKEN ="8744821732:AAHnRuOBfmOgL8_iE_w9yK14-qOfYYN75kw"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("البوت اشتغل بنجاح ✅")
