@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 TOKEN = "Here is the token for bot تحميل من سناب شات 👻 @snpFlashbot:
 
-8744821732:AAFNgPo1ahFh9SCOjziWt5N8adZKaNa7sDM"
+8744821732:AAFZxvZsKT93pVhjOAJ7O3q-UCU38aWDUZs"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("البوت اشتغل بنجاح ✅")
